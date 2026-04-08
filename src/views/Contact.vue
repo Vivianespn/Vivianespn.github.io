@@ -8,7 +8,7 @@
     <div class="contact-info">
       <div class="contact-item">
         <span>📧</span>
-        <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a>
+        <a href="mailto:viviane.spn.spn@gmail.com">viviane.spn.spn@gmail.com</a>
       </div>
       <div class="contact-item">
         <span>💻</span>
