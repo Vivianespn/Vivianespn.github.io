@@ -1,81 +1,111 @@
 <template>
   <section>
     <h1>Projetos</h1>
+    <p class="intro">
+      Alguns dos meus projetos no GitHub. Clique para ver mais detalhes.
+    </p>
     <div class="projects-grid">
-      <div class="project-card" v-for="proj in projects" :key="proj.id">
-        <div class="project-img">🖼️</div>
-        <h3>{{ proj.title }}</h3>
-        <p>{{ proj.description }}</p>
-        <a :href="proj.link" target="_blank" class="project-link"
-          >Ver projeto →</a
-        >
-      </div>
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.id"
+        :title="project.title"
+        :description="project.description"
+        :language="project.language"
+        :link="project.link"
+        :updated="project.updated"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
+import ProjectCard from '../components/ProjectCard.vue';
+
 const projects = [
   {
     id: 1,
-    title: 'Meu Portfólio',
-    description: 'Este site que você está vendo, feito com Vue 3 e Vue Router.',
-    link: 'https://github.com/Vivianespn/Vivianespn.github.io',
+    title: 'AnaliseRedesComplexas',
+    description: 'Grafos, Estruturas Complexas e Métricas de Avaliação.',
+    language: 'JavaScript',
+    link: 'https://github.com/Vivianespn/AnaliseRedesComplexas',
+    updated: '2025-12-14',
   },
   {
     id: 2,
-    title: 'Projeto Exemplo 2',
-    description: 'Descrição breve do projeto. Em breve adicionarei mais.',
-    link: '#',
+    title: 'Otimização de Antenas com GA',
+    description:
+      'Maximizar a cobertura da área permitida com o menor número possível de antenas.',
+    language: 'Python',
+    link: 'https://github.com/Vivianespn/Otimiza-o-de-Antenas-com-GA',
+    updated: '2025-05-25',
   },
   {
     id: 3,
-    title: 'Projeto Exemplo 3',
-    description: 'Outro projeto interessante que desenvolvi.',
-    link: '#',
+    title: 'UBS-Conecta',
+    description:
+      'Site para agendamento de consultas nas UBSs, facilitando o acesso à saúde pública.',
+    language: 'HTML',
+    link: 'https://github.com/Vivianespn/UBS-Conecta',
+    updated: '2025-01-24',
+  },
+  {
+    id: 4,
+    title: 'weather-app',
+    description:
+      'Aplicação em React e TypeScript que consome a OpenWeatherMap API.',
+    language: 'TypeScript',
+    link: 'https://github.com/Vivianespn/weather-app',
+    updated: '2024-08-22',
+  },
+  {
+    id: 5,
+    title: 'to-do-list-app',
+    description:
+      'Aplicativo de To-Do List simples e funcional com adicionar, editar, excluir e marcar tarefas.',
+    language: 'CSS',
+    link: 'https://github.com/Vivianespn/to-do-list-app',
+    updated: '2024-08-22',
+  },
+  {
+    id: 6,
+    title: 'Jest-Treino',
+    description: 'Treinamento com Jest para testes unitários.',
+    language: 'JavaScript',
+    link: 'https://github.com/Vivianespn/Jest-Treino',
+    updated: '2024-08-08',
+  },
+  {
+    id: 7,
+    title: 'Treinamento-Web-Components',
+    description: 'Treinamento de Web Components.',
+    language: 'JavaScript',
+    link: 'https://github.com/Vivianespn/Treinamento-Web-Components',
+    updated: '2024-08-07',
+  },
+  {
+    id: 8,
+    title: 'Projeto_Sculptor',
+    description:
+      'Projeto final da disciplina de Programação Avançada com POO e Qt.',
+    language: 'C++',
+    link: 'https://github.com/Vivianespn/Projeto_Sculptor',
+    updated: '2023-05-29',
   },
 ];
 </script>
 
 <style scoped>
 h1 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+.intro {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: var(--text-secondary);
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
-}
-.project-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-}
-.project-img {
-  height: 150px;
-  background: #e0f2e9;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.project-card h3 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
-.project-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #42b883;
-  text-decoration: none;
-  font-weight: 500;
 }
 </style>

@@ -7,15 +7,20 @@
         <router-link to="/about">Sobre</router-link>
         <router-link to="/projects">Projetos</router-link>
         <router-link to="/contact">Contato</router-link>
+        <ThemeToggle />
       </div>
     </div>
   </nav>
 </template>
 
+<script setup>
+import ThemeToggle from './ThemeToggle.vue';
+</script>
+
 <style scoped>
 nav {
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -32,7 +37,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #42b883;
+  color: var(--accent);
   text-decoration: none;
 }
 .nav-links {
@@ -41,13 +46,13 @@ nav {
 }
 .nav-links a {
   text-decoration: none;
-  color: #555;
+  color: var(--text-secondary);
   font-weight: 500;
   transition: color 0.2s;
 }
 .nav-links a:hover,
 .nav-links a.router-link-active {
-  color: #42b883;
+  color: var(--accent);
 }
 @media (max-width: 600px) {
   .nav-container {

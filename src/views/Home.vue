@@ -11,7 +11,9 @@
     </div>
     <div class="hero-image">
       <!-- Substitua pela sua imagem ou um placeholder -->
-      <div class="placeholder-img">📸</div>
+      <div class="placeholder-img">
+        <font-awesome-icon icon="fa-solid fa-user" size="4x" />
+      </div>
     </div>
   </section>
 </template>
@@ -30,16 +32,20 @@
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 .subtitle {
   font-size: 1.5rem;
-  color: #42b883;
+  color: var(--accent);
   margin-bottom: 1rem;
+}
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 .btn {
   display: inline-block;
-  background-color: #42b883;
+  background-color: var(--accent);
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
@@ -49,7 +55,7 @@
   transition: background 0.2s;
 }
 .btn:hover {
-  background-color: #359268;
+  background-color: var(--accent-hover);
 }
 .hero-image {
   flex: 1;
@@ -59,12 +65,13 @@
 .placeholder-img {
   width: 250px;
   height: 250px;
-  background-color: #e0f2e9;
+  background-color: var(--bg-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
 }
 @media (max-width: 768px) {
   .hero {

@@ -7,15 +7,16 @@
     </p>
     <div class="contact-info">
       <div class="contact-item">
-        <span>📧</span>
+        <font-awesome-icon icon="fa-solid fa-envelope" class="icon" />
         <a href="mailto:viviane.spn.spn@gmail.com">viviane.spn.spn@gmail.com</a>
       </div>
       <div class="contact-item">
-        <span>💻</span>
+        <font-awesome-icon icon="fa-brands fa-github" class="icon" />
         <a href="https://github.com/Vivianespn" target="_blank"
           >github.com/Vivianespn</a
         >
       </div>
+      <!-- Adicione outros contatos se desejar -->
     </div>
   </section>
 </template>
@@ -23,10 +24,13 @@
 <style scoped>
 h1 {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: var(--text-primary);
+}
+p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
 }
 .contact-info {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -36,9 +40,14 @@ h1 {
   align-items: center;
   gap: 1rem;
   font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.icon {
+  width: 1.5rem;
+  color: var(--accent);
 }
 .contact-item a {
-  color: #42b883;
+  color: var(--accent);
   text-decoration: none;
 }
 .contact-item a:hover {

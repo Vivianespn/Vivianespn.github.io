@@ -4,7 +4,8 @@
     <div class="about-content">
       <p>
         Sou uma desenvolvedora apaixonada por criar soluções web elegantes e
-        funcionais.
+        funcionais. Atualmente estou me aprofundando em Vue.js e outras
+        tecnologias modernas.
       </p>
       <h2>Habilidades</h2>
       <ul class="skills-list">
@@ -21,14 +22,15 @@
 <style scoped>
 h1 {
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 .about-content {
   max-width: 800px;
+  color: var(--text-secondary);
 }
 h2 {
   margin: 2rem 0 1rem;
-  color: #42b883;
+  color: var(--accent);
 }
 .skills-list {
   display: flex;
@@ -37,10 +39,11 @@ h2 {
   list-style: none;
 }
 .skills-list li {
-  background: #e0f2e9;
-  color: #2c3e50;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
+  border: 1px solid var(--border-color);
 }
 </style>
